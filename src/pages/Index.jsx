@@ -1,11 +1,11 @@
-import { Box, Flex, Text, VStack, HStack, Tag, Button } from '@chakra-ui/react';
+import { Box, Flex, Text, VStack, HStack, Tag, Button, Image } from '@chakra-ui/react';
 import { FaEnvelope } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const developers = [
-  { name: 'John Doe', location: 'New York, USA', technologies: ['React', 'Node'] },
-  { name: 'Jane Smith', location: 'Berlin, Germany', technologies: ['.NET', 'JavaScript'] },
-  { name: 'Carlos Ruiz', location: 'Madrid, Spain', technologies: ['Go', 'React'] }
+  { name: 'John Doe', location: 'New York, USA', technologies: ['React', 'Node'], imageUrl: '/images/john_doe.jpg' },
+  { name: 'Jane Smith', location: 'Berlin, Germany', technologies: ['.NET', 'JavaScript'], imageUrl: '/images/jane_smith.jpg' },
+  { name: 'Carlos Ruiz', location: 'Madrid, Spain', technologies: ['Go', 'React'], imageUrl: '/images/carlos_ruiz.jpg' }
 ];
 
 const Index = () => {
@@ -23,6 +23,7 @@ const Index = () => {
         <HStack spacing={10} wrap="wrap" justify="center">
           {developers.map(dev => (
             <Box p={5} shadow="md" borderWidth="1px" borderRadius="lg" w="30%">
+              <Image borderRadius="full" boxSize="150px" src={dev.imageUrl} alt={`Image of ${dev.name}`} mb={4} />
               <Text fontWeight="bold">{dev.name}</Text>
               <Text>{dev.location}</Text>
               <HStack spacing={2} mt={2}>
@@ -35,6 +36,16 @@ const Index = () => {
           ))}
         </HStack>
       </VStack>
+      <Box bg="brand.800" color="brand.500" p={5} mt={10}>
+        <VStack spacing={3}>
+          <Text fontSize="lg" fontWeight="bold">Particles Marketplace</Text>
+          <Text>Contact us at: info@particles.com</Text>
+          <HStack spacing={5}>
+            <Link to="/terms">Terms of Service</Link>
+            <Link to="/privacy">Privacy Policy</Link>
+          </HStack>
+        </VStack>
+      </Box>
     </Box>
   );
 };
