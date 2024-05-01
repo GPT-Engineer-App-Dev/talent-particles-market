@@ -14,8 +14,8 @@ const SearchPage = () => {
   return (
     <Box p={5} bg="brand.900" color="brand.500">
       <Flex direction="column" align="center" mb={10}>
-        <Text fontSize="3xl" fontWeight="bold">Search Developers</Text>
-        <Text fontSize="xl">Find top-tier software talent specialized in web technologies.</Text>
+        <Text fontSize="3xl" fontWeight="bold" color="brand.500" textShadow="1px 1px 2px black">Search Developers</Text>
+        <Text fontSize="xl" color="brand.500">Find top-tier software talent specialized in web technologies.</Text>
       </Flex>
       <VStack spacing={4}>
         <Input
@@ -35,8 +35,8 @@ const SearchPage = () => {
             dev.technologies.some(tech => tech.toLowerCase().includes(searchQuery.toLowerCase()))
           ).map(dev => (
             <Box p={5} bg="brand.800" color="brand.500" shadow="md" borderWidth="1px" borderRadius="lg" w={isLargerThan768 ? "30%" : "80%"}>
-              <Text fontWeight="bold">{dev.name}</Text>
-              <Text>{dev.location}</Text>
+              <Text fontWeight="bold" color="brand.500">{dev.name}</Text>
+              <Text color="brand.500">{dev.location}</Text>
               <HStack spacing={2}>
                 {dev.technologies.map(tech => <Tag size="sm" colorScheme="blue">{tech}</Tag>)}
               </HStack>
