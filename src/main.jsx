@@ -9,7 +9,7 @@ const colors = {
     800: "#1E1E1E", // Slightly lighter grey for card backgrounds
     700: "#2C2C2C", // Grey for hover states
     600: "#3A3A3A", // Light grey for borders
-    500: "#E0E1DD"  // Off White for text
+    500: "#F0F1EE"  // Brighter Off White for text
   },
 };
 
