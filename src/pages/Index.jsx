@@ -41,6 +41,7 @@ const Index = () => {
           <Text fontSize="lg" fontWeight="bold">Particles Marketplace</Text>
           <Text>Contact us at: info@particles.com</Text>
           <HStack spacing={5}>
+            <Link to="/contact">Contact Us</Link>
             <Link to="/terms">Terms of Service</Link>
             <Link to="/privacy">Privacy Policy</Link>
           </HStack>
