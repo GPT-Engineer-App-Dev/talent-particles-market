@@ -21,6 +21,9 @@ const SearchPage = () => {
         <Input
           placeholder="Search developers..."
           size="lg"
+          bg="brand.500"
+          color="brand.900"
+          _placeholder={{ color: 'brand.700' }}
           leftIcon={<FaSearch />}
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
@@ -31,13 +34,13 @@ const SearchPage = () => {
             dev.location.toLowerCase().includes(searchQuery.toLowerCase()) ||
             dev.technologies.some(tech => tech.toLowerCase().includes(searchQuery.toLowerCase()))
           ).map(dev => (
-            <Box p={5} shadow="md" borderWidth="1px" borderRadius="lg" w={isLargerThan768 ? "30%" : "80%"}>
+            <Box p={5} bg="brand.900" color="brand.500" shadow="md" borderWidth="1px" borderRadius="lg" w={isLargerThan768 ? "30%" : "80%"}>
               <Text fontWeight="bold">{dev.name}</Text>
               <Text>{dev.location}</Text>
               <HStack spacing={2}>
                 {dev.technologies.map(tech => <Tag size="sm" colorScheme="blue">{tech}</Tag>)}
               </HStack>
-              <Button leftIcon={<FaEnvelope />} colorScheme="teal" variant="solid" mt={3}>
+              <Button leftIcon={<FaEnvelope />} colorScheme="blue" variant="solid" mt={3} bg="brand.700" _hover={{ bg: "brand.800" }}>
                 Send Message
               </Button>
             </Box>

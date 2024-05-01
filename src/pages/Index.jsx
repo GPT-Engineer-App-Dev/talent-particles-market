@@ -10,12 +10,12 @@ const developers = [
 
 const Index = () => {
   return (
-    <Box p={5}>
+    <Box p={5} bg="brand.900" color="brand.500">
       <Flex direction="column" align="center" mb={10}>
-        <Text fontSize="4xl" fontWeight="bold" color="teal.500">Welcome to Particles</Text>
-        <Text fontSize="xl" mt={2}>Connecting you with top-tier software talent specialized in web technologies.</Text>
+        <Text fontSize="4xl" fontWeight="bold" color="brand.500">Welcome to Particles</Text>
+        <Text fontSize="xl" mt={2} color="brand.500">Connecting you with top-tier software talent specialized in web technologies.</Text>
         <Link to="/search">
-          <Button mt={5} colorScheme="teal" size="lg">Search Developers</Button>
+          <Button mt={5} colorScheme="blue" size="lg" bg="brand.700" _hover={{ bg: "brand.800" }}>Search Developers</Button>
         </Link>
       </Flex>
       <VStack spacing={8} mt={10}>
