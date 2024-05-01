@@ -1,7 +1,11 @@
 import { useState } from 'react';
 import { Box, Flex, Text, Input, Button, VStack, HStack, Tag, useMediaQuery } from '@chakra-ui/react';
 import { FaSearch, FaEnvelope } from 'react-icons/fa';
-import { developers } from './Index.jsx';
+const developers = [
+  { name: 'John Doe', location: 'New York, USA', technologies: ['React', 'Node'] },
+  { name: 'Jane Smith', location: 'Berlin, Germany', technologies: ['.NET', 'JavaScript'] },
+  { name: 'Carlos Ruiz', location: 'Madrid, Spain', technologies: ['Go', 'React'] }
+];
 
 const SearchPage = () => {
   const [isLargerThan768] = useMediaQuery('(min-width: 768px)');
