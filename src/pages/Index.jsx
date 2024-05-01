@@ -3,9 +3,9 @@ import { FaEnvelope } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const developers = [
-  { name: 'John Doe', location: 'New York, USA', technologies: ['React', 'Node'], imageUrl: '/images/john_doe.jpg' },
-  { name: 'Jane Smith', location: 'Berlin, Germany', technologies: ['.NET', 'JavaScript'], imageUrl: '/images/jane_smith.jpg' },
-  { name: 'Carlos Ruiz', location: 'Madrid, Spain', technologies: ['Go', 'React'], imageUrl: '/images/carlos_ruiz.jpg' }
+  { name: 'John Doe', location: 'New York, USA', technologies: ['React', 'Node'], imageUrl: '/public/images/john_doe.jpg' },
+  { name: 'Jane Smith', location: 'Berlin, Germany', technologies: ['.NET', 'JavaScript'], imageUrl: '/public/images/jane_smith.jpg' },
+  { name: 'Carlos Ruiz', location: 'Madrid, Spain', technologies: ['Go', 'React'], imageUrl: '/public/images/carlos_ruiz.jpg' }
 ];
 
 const Index = () => {
@@ -23,7 +23,7 @@ const Index = () => {
         <HStack spacing={10} wrap="wrap" justify="center">
           {developers.map(dev => (
             <Box p={5} shadow="md" borderWidth="1px" borderRadius="lg" w="30%">
-              <Image borderRadius="full" boxSize="150px" src={dev.imageUrl} alt={`Image of ${dev.name}`} mb={4} />
+              <Image borderRadius="full" boxSize="150px" src={dev.imageUrl} alt={`Image of ${dev.name}`} mb={4} style={{ boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)', filter: 'brightness(0.9)' }} />
               <Text fontWeight="bold">{dev.name}</Text>
               <Text>{dev.location}</Text>
               <HStack spacing={2} mt={2}>
